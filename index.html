@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impacto Kids</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">Impacto kids</div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav>
+      <ul class="nav-list" id="navList">
+        <li><a href="#banner">Início</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#contact">Contato</a></li>
+        <li><a href="donate.html" class="btn-green nav-donate">DOAR</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="banner" id="banner">
+    <img class="banner-image" src="assets/banner-photo.png" alt="Crianças sorrindo e brincando ao ar livre">
+    <h1 class="banner-text">Coisas boas<br>acontecem<br>aqui!</h1>
+  </section>
+
+  <section class="about-section" id="about">
+    <div class="about-icon">
+      <img src="assets/icon-megaphone.png" alt="Ícone de megafone">
+    </div>
+    <div class="about-content">
+      <h2>Sobre nós</h2>
+      <p>
+        O Impacto Kids é uma organização social sem fins lucrativos dedicada ao
+        acolhimento, desenvolvimento e proteção de crianças e adolescentes em
+        situação de vulnerabilidade social. Nosso propósito é oferecer
+        oportunidades que contribuam para a construção de um futuro mais
+        digno, seguro e promissor.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== HIGHLIGHTS (blue banner + video) ===== -->
+  <section class="highlights">
+    <div class="highlights-text">
+      <h3>Cada criança merece uma oportunidade<br>para crescer, aprender e sonhar!</h3>
+      <ul>
+        <li>✅ Apoio educacional e social</li>
+        <li>✅ Atividades recreativas e culturais</li>
+        <li>✅ Desenvolvimento de valores e cidadania</li>
+      </ul>
+    </div>
+
+    <div class="highlights-video">
+      <iframe
+        src="https://www.youtube.com/embed/R9fst-TP2Z0"
+        title="Documentário 10 anos do Instituto Neymar Jr"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <section class="cards-section">
+    <article class="card">
+      <img class="card-image" src="assets/card-painting.png" alt="Criança com as mãos pintadas de tinta colorida">
+      <div class="card-caption">
+        <h4>Um lar cheio de amor para nossas crianças!</h4>
+        <a href="#">Leia mais</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img class="card-image" src="assets/card-kite.png" alt="Crianças correndo e soltando pipa em um campo">
+      <div class="card-caption">
+        <h4>Centro de apoio para crianças e adolescentes</h4>
+        <a href="#">Leia mais</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img class="card-image" src="assets/card-daycare.png" alt="Crianças pequenas brincando com blocos de montar">
+      <div class="card-caption">
+        <h4>Nossas creches: um início de vida promissor</h4>
+        <a href="#">Leia mais</a>
+      </div>
+    </article>
+  </section>
+
+  <footer class="contact-section" id="contact">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Fale com a gente!</h3>
+        <p>
+          Juntos buscamos oportunidades para milhares de vidas de crianças,
+          adolescentes e suas famílias.
+        </p>
+
+        <div class="label">ESCRITÓRIO CENTRAL</div>
+        <div class="address">
+          (51) 3208-3074 - (11) 3208-0511<br>
+          impactokids@gmail.com<br>
+          R. Gen. Balbão, 81 - Centro, Charqueadas - RS, 96745-000
+        </div>
+      </div>
+
+      <form class="contact-form">
+        <div class="form-row">
+          <input type="text" placeholder="Nome Completo">
+        </div>
+        <div class="form-row">
+          <input type="text" placeholder="Empresa">
+          <input type="tel" placeholder="Telefone">
+        </div>
+        <div class="form-row">
+          <input type="email" placeholder="E-mail">
+        </div>
+        <div class="form-row">
+          <input type="text" placeholder="Assunto">
+        </div>
+        <textarea placeholder="Escreva aqui sua mensagem"></textarea>
+        <button type="submit" class="btn-green">Enviar mensagem</button>
+      </form>
+    </div>
+
+    <div class="footer-bottom">
+      <span>Impacto Kids © 2026 - Todos os direitos reservados.</span>
+      <span class="social-icons">
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navList = document.getElementById('navList');
+    navToggle.addEventListener('click', () => {
+      navList.classList.toggle('open');
+      navToggle.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
