@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impacto Kids | Entrar ou Cadastrar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/sign.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <span class="site-header__logo">Impacto kids</span>
+    <nav class="site-header__nav">
+      <a href="../pages/index.html">Início</a>
+      <a href="../pages/sobre.html">Sobre</a>
+      <a href="../pages/contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <main class="auth-card">
+
+    <section class="auth-side">
+      <span class="auth-side__badge">
+        <svg viewBox="0 0 24 24" class="auth-side__badge-icon"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2L12 16.4l-6.3 4.6L8 13.8 2 9.2h7.6z"/></svg>
+        Impacto Kids
+      </span>
+      <h1 class="auth-side__title">Cada criança merece uma oportunidade para crescer, aprender e sonhar!</h1>
+      <p class="auth-side__text">
+        Acompanhe as atividades, veja as novidades da ONG e faça parte
+        dessa turma que transforma o futuro das crianças.
+      </p>
+
+      <ul class="auth-side__list">
+        <li>Apoio educacional e social</li>
+        <li>Atividades recreativas e culturais</li>
+        <li>Desenvolvimento de valores e cidadania</li>
+      </ul>
+    </section>
+
+    <section class="auth-form">
+
+      <div class="tabs" role="tablist" aria-label="Alternar entre login e cadastro">
+        <button class="tabs__btn is-active" id="tab-login" role="tab" aria-selected="true" aria-controls="panel-login">
+          Entrar
+        </button>
+        <button class="tabs__btn" id="tab-cadastro" role="tab" aria-selected="false" aria-controls="panel-cadastro">
+          Cadastrar
+        </button>
+        <span class="tabs__indicator" aria-hidden="true"></span>
+      </div>
+
+      <form class="panel is-active" id="panel-login" role="tabpanel" aria-labelledby="tab-login" novalidate>
+        <h2 class="panel__title">Que bom te ver de novo!</h2>
+
+        <label class="field">
+          <span class="field__label">E-mail</span>
+          <input type="email" name="email" class="field__input" placeholder="voce@email.com" required autocomplete="email">
+          <span class="field__error"></span>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Senha</span>
+          <div class="field__wrap">
+            <input type="password" name="senha" class="field__input" placeholder="••••••••" required minlength="6" autocomplete="current-password">
+            <button type="button" class="field__toggle" aria-label="Mostrar senha">👁</button>
+          </div>
+          <span class="field__error"></span>
+        </label>
+
+        <a href="#" class="field__forgot">Esqueci minha senha</a>
+
+        <button type="submit" class="btn-submit">Entrar</button>
+
+        <p class="panel__switch">
+          Não tem conta? <button type="button" class="link-btn" data-goto="cadastro">Cadastre-se</button>
+        </p>
+      </form>
+
+      <form class="panel" id="panel-cadastro" role="tabpanel" aria-labelledby="tab-cadastro" novalidate>
+        <h2 class="panel__title">Vem fazer parte dessa turma!</h2>
+
+        <label class="field">
+          <span class="field__label">Nome completo</span>
+          <input type="text" name="nome" class="field__input" placeholder="Seu nome" required autocomplete="name">
+          <span class="field__error"></span>
+        </label>
+
+        <label class="field">
+          <span class="field__label">E-mail</span>
+          <input type="email" name="email" class="field__input" placeholder="voce@email.com" required autocomplete="email">
+          <span class="field__error"></span>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Senha</span>
+          <div class="field__wrap">
+            <input type="password" name="senha" class="field__input" placeholder="Mínimo 6 caracteres" required minlength="6" autocomplete="new-password">
+            <button type="button" class="field__toggle" aria-label="Mostrar senha">👁</button>
+          </div>
+          <span class="field__error"></span>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Confirmar senha</span>
+          <input type="password" name="confirmarSenha" class="field__input" placeholder="Repita a senha" required minlength="6" autocomplete="new-password">
+          <span class="field__error"></span>
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" name="termos" required>
+          <span>Aceito os termos de uso e a política de privacidade</span>
+        </label>
+
+        <button type="submit" class="btn-submit">Criar minha conta</button>
+
+        <p class="panel__switch">
+          Já tem conta? <button type="button" class="link-btn" data-goto="login">Entrar</button>
+        </p>
+      </form>
+
+      <p class="toast" id="toast" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script src="../auth.js"></script>
+</body>
+</html>
