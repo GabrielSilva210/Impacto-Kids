@@ -31,7 +31,7 @@ const goals = [
     }
   ];
 
-  const supportersLog = {}; // id -> [{name, amount}]
+  const supportersLog = {}; 
   goals.forEach(g => supportersLog[g.id] = []);
 
   function fmt(n, unit){
